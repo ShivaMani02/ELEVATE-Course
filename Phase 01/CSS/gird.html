@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grid & Layout Tricks + Position</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px;">
+
+  <div style="position: sticky; top: 0; background: #cce5ff; padding: 10px; margin-top: 20px;">
+    This is a <strong>sticky</strong> header — scroll down to see the effect.
+  </div>
+  
+  <h1 style="text-align: center;">CSS Grid & Layout Tricks + CSS Position</h1>
+
+  <h2>1. Grid Container & Items</h2>
+  <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 10px; background: #f0f0f0; padding: 10px;">
+    <div style="background: lightcoral; padding: 20px;">1fr column</div>
+    <div style="background: lightblue; padding: 20px;">2fr column</div>
+  </div>
+
+  <h2>2. Grid Row & Column Placement</h2>
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 100px); gap: 10px; background: #e0e0e0; margin-top: 10px; padding: 10px;">
+    <div style="background: salmon; grid-column: 1 / 3; grid-row: 1 / 2; padding: 20px;">Spanning 2 Columns</div>
+    <div style="background: lightgreen; grid-column: 3; grid-row: 1 / 3; padding: 20px;">Spanning 2 Rows</div>
+    <div style="background: peachpuff; padding: 20px;">Item</div>
+  </div>
+
+  <h2>3. Responsive Grid using auto-fit</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 10px; background: #ddd; padding: 10px;">
+    <div style="background: pink; padding: 20px;">Box 1</div>
+    <div style="background: lightyellow; padding: 20px;">Box 2</div>
+    <div style="background: lightgray; padding: 20px;">Box 3</div>
+    <div style="background: lightsteelblue; padding: 20px;">Box 4</div>
+  </div>
+
+  <h2>4. Grid Areas</h2>
+  <div style="display: grid; grid-template-areas: 'header header' 'sidebar content'; grid-template-columns: 1fr 2fr; grid-template-rows: 50px 100px; gap: 5px; background: #fafafa; margin-top: 10px;">
+    <div style="grid-area: header; background: #d4edda; padding: 10px;">Header</div>
+    <div style="grid-area: sidebar; background: #c3e6cb; padding: 10px;">Sidebar</div>
+    <div style="grid-area: content; background: #155724; color: white; padding: 10px;">Content</div>
+  </div>
+
+  <h2>5. Centering with Grid</h2>
+  <div style="display: grid; place-items: center; height: 150px; background: #f8d7da; margin-top: 10px;">
+    <div style="background: white; padding: 20px;">Centered Box</div>
+  </div>
+
+  <h2>6. CSS Position Property</h2>
+  <div style="position: relative; background: #e2e3e5; height: 200px; padding: 10px;">
+    <p>This is a <strong>relative</strong> container.</p>
+    <div style="position: absolute; top: 20px; left: 20px; background: #bee5eb; padding: 10px;">
+      Absolute box inside relative container
+    </div>
+  </div>
+
+
+  <div style="height: 300px; background: #fefefe;"></div>
+
+  <div style="position: fixed; bottom: 10px; right: 10px; background: #f5c6cb; padding: 10px;">
+    Fixed positioned box (bottom-right)
+  </div>
+
+</body>
+</html>
