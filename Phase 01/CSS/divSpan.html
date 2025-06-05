@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model</title>
+  <style>
+  
+    /* DIV Example */
+    .div-example {
+      width: 300px;
+      padding: 15px;
+      border: 2px solid green;
+      margin-bottom: 20px;
+      background-color: #d4fcd4;
+    }
+
+    /* SPAN Example */
+    .span-example {
+      padding: 10px;
+      border: 2px solid red;
+      background-color: #ffd1d1;
+    }
+
+    .box-container {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>DIV & SPAN</h1>
+
+
+  <div class="box-container">
+    <h2>Difference between &lt;div&gt; and &lt;span&gt;</h2>
+
+    <div class="div-example">
+      I am a <strong>&lt;div&gt;</strong> — block-level element. I start on a new line.
+    </div>
+
+     <div class="div-example">
+      I am a <strong>&lt;div&gt;</strong> — block-level element. I start on a new line.
+    </div>
+
+     <div class="div-example">
+      I am a <strong>&lt;div&gt;</strong> — block-level element. I start on a new line.
+    </div>
+
+    <p>
+      I am inline text with a 
+        <span class="span-example">&lt;span&gt; element</span> — inline-level element.
+
+        <span class="span-example">&lt;span&gt; element</span> — inline-level element.
+
+        <span class="span-example">&lt;span&gt; element</span> — inline-level element.
+
+    </p>
+  </div>
+</body>
+</html>

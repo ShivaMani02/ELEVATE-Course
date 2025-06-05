@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elevate by Shivansh- Full Stack Web Dev Course</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bs-primary: #6f42c1;
+        --bs-primary-rgb: 111, 66, 193;
+        --bs-secondary: #ff9800;
+        --bs-secondary-rgb: 255, 152, 0;
+      }
+      .bg-primary {
+        background-color: #6f42c1 !important;
+      }
+      .navbar,
+      .footer-link {
+        background-color: #6f42c1 !important;
+      }
+      .text-primary {
+        color: #6f42c1 !important;
+      }
+      .btn-primary {
+        background-color: #6f42c1 !important;
+        border-color: #6f42c1 !important;
+      }
+      .btn-primary:hover,
+      .btn-primary:focus {
+        background-color: #512a97 !important;
+        border-color: #512a97 !important;
+      }
+      .btn-secondary {
+        background-color: #ff9800 !important;
+        border-color: #ff9800 !important;
+        color: #fff !important;
+      }
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+        background-color: #e65100 !important;
+        border-color: #e65100 !important;
+        color: #fff !important;
+      }
+      .footer-link {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .footer-link:hover {
+        color: #ff9800;
+      }
+      .card-title {
+        color: #6f42c1;
+      }
+      .accordion-button:not(.collapsed) {
+        background-color: #ede7f6;
+        color: #6f42c1;
+      }
+      .accordion-button:focus {
+        box-shadow: 0 0 0 0.2rem rgba(111, 66, 193, 0.25);
+      }
+      .badge-phase {
+        font-size: 1em;
+      }
+      .shadow-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(111, 66, 193, 0.08) !important;
+      }
+      .pointer {
+        cursor: pointer;
+      }
+      .modal-header {
+        background: linear-gradient(90deg, #6f42c1 60%, #ff9800 100%);
+        color: #fff;
+      }
+      .modal-footer .btn {
+        min-width: 120px;
+      }
+      @media (max-width: 576px) {
+        .display-5 {
+          font-size: 2rem;
+        }
+        .card-title {
+          font-size: 1.1rem;
+        }
+        .table-responsive {
+          font-size: 0.95rem;
+        }
+      }
+      .table-check-col {
+        width: 60px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .table-topic-col {
+        min-width: 220px;
+      }
+      .table-video-col {
+        min-width: 120px;
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "@shivanshvasu",
+        "alternateName": "@shivanshvasu Linktree Profile",
+        "identifier": "shivanshvasu",
+        "description": "Join the community and grow : https://youtube.com/@shivanshvasu",
+        "image": "https://linktr.ee/og/image/shivanshvasu.jpg",
+        "url": "https://linktr.ee/shivanshvasu",
+        "sameAs": [
+          "https://instagram.com/theshivanshvasuofficial",
+          "https://youtube.com/@shivanshvasu",
+          "https://www.linkedin.com/theshivanshvasu",
+          "https://x.com/theshivanshvasu",
+          "https://www.whatsapp.com/channel/https://whatsapp.com/channel/0029VbAWGE5ICVfcjjKTAS0B"
+        ],
+        "significantLink": "https://youtube.com/@shivanshvasu?si=XQjCRTrnd8mY5ahH&sub_confirmation=1",
+        "isPartOf": "https://linktr.ee",
+        "thumbnailUrl": "https://linktr.ee/og/image/shivanshvasu.jpg",
+        "genre": "business-professional",
+        "keywords": "business-professional"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold pointer" onclick="showProfileModal()"
+          >🪜Elevate Course</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#phases">Phases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#addons">Add-ons</a>
+            </li>
+          </ul>
+          <button class="btn btn-secondary me-2" onclick="showProfileModal()">
+            Connect Shivansh
+          </button>
+          <a
+            href="https://www.youtube.com/@shivanshvasu"
+            class="btn btn-light"
+            target="_blank"
+            >YouTube</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-light py-5 text-center">
+      <div class="container">
+        <h1 class="display-5 fw-bold pointer" onclick="showProfileModal()">
+          Elevate - Web Dev Full Stack Course
+        </h1>
+        <p class="lead mb-3">
+          By
+          <span class="pointer text-primary" onclick="showProfileModal()"
+            >Shivansh Vasu</span
+          >
+        </p>
+        <p class="mb-4">
+          A complete A-Z Course from HTML to MERN stack, with projects, quizzes,
+          and real-world challenges.
+        </p>
+        <a href="#phases" class="btn btn-primary btn-lg">Start Learning</a>
+        <button
+          class="btn btn-secondary btn-lg ms-2"
+          onclick="showProfileModal()"
+        >
+          About Mentor
+        </button>
+      </div>
+    </section>
+
+    <!-- About Course Section -->
+    <section id="about" class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-8 mx-auto">
+          <div class="card shadow-sm border-0 mb-4">
+            <div class="card-body">
+              <h2 class="mb-3 text-primary">About the Course</h2>
+              <p>
+                <strong>Elevate</strong> is a 60-day, hands-on, project-based
+                full stack web development course designed to take you from
+                beginner to job-ready developer. Covering everything from HTML,
+                CSS, and Git to advanced React, Node.js, Express, and MongoDB,
+                this course is packed with real-world projects, quizzes,
+                revision tools, and career guidance.
+              </p>
+              <ul>
+                <li>
+                  <b>Structured Phases:</b> Each phase focuses on a core
+                  technology or skill, with daily topics and practical tasks.
+                </li>
+                <li>
+                  <b>Progress Tracking:</b> Use checkboxes to track your
+                  learning and revision for every video.
+                </li>
+                <li>
+                  <b>Interactive Learning:</b> Click on any topic for quick
+                  details and video links.
+                </li>
+                <li>
+                  <b>Career Support:</b> Get resume, LinkedIn, and interview
+                  prep, plus deployment and portfolio guidance.
+                </li>
+                <li>
+                  <b>Community:</b> Join live sessions, challenges, and connect
+                  with other learners.
+                </li>
+              </ul>
+              <div class="alert alert-success mt-3 mb-0">
+                <b>Ready to Elevate your skills?</b> Start from Day 1 and build
+                your way to a full stack developer!
+              </div>
+            </div>
+          </div>
+          <!-- Progress Tracker Bar -->
+        <div class="my-4">
+          <label class="form-label fw-bold">Overall Progress Tracker:</label>
+          <div class="progress" style="height: 28px;">
+            <div id="progressBar" class="progress-bar progress-bar-striped bg-success" role="progressbar"
+              style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+              0%
+            </div>
+          </div>
+          <div class="small mt-2 text-muted" id="progressText"></div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Phase-Wise Plan Table -->
+    <section id="phases" class="container py-5">
+      <h2 class="mb-4 text-primary">📅 Phase-Wise Plan & Progress Tracker</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered align-middle shadow-sm">
+          <thead class="table-light">
+            <tr>
+              <th class="table-check-col">Done</th>
+              <th class="table-check-col">Revision</th>
+              <th>Day</th>
+              <th class="table-topic-col">Topic</th>
+              <th class="table-video-col">Video</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Phase 1 -->
+            <tr class="table-primary">
+              <td colspan="5">
+                <b>🎯 Phase 1: HTML, CSS & Git (Days 1–10)</b>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>1</td>
+              <td class="pointer" onclick="showDayModal(1)">
+                Intro to Full Stack Web Dev + Tools Setup
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(1);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>2</td>
+              <td class="pointer" onclick="showDayModal(2)">
+                HTML Basics – Tags, Structure, Boilerplate
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(2);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>3</td>
+              <td class="pointer" onclick="showDayModal(3)">
+                Forms, Inputs, Semantic HTML, Embedding Media
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(3);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>4</td>
+              <td class="pointer" onclick="showDayModal(4)">
+                CSS Basics – Selectors, Colors, Inline/External Styles
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(4);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>5</td>
+              <td class="pointer" onclick="showDayModal(5)">
+                Box Model – Margin, Padding, Border
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(5);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>6</td>
+              <td class="pointer" onclick="showDayModal(6)">
+                Flexbox - Deep Dive
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(6);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>7</td>
+              <td class="pointer" onclick="showDayModal(7)">
+                CSS Grid & Layout Tricks
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(7);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>8</td>
+              <td class="pointer" onclick="showDayModal(8)">
+                Responsive Design + Media Queries
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(8);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>9</td>
+              <td class="pointer" onclick="showDayModal(9)">
+                Git & GitHub Basics – Repos, Commits, Push
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(9);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>10</td>
+              <td class="pointer" onclick="showDayModal(10)">
+                Branching, Merge, Pull Requests (PRs)
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(10);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr class="table-success">
+              <td colspan="5">
+                <b>💡 Mini Project: Personal Portfolio Website (HTML + CSS)</b>
+              </td>
+            </tr>
+            <!-- Phase 2 -->
+            <tr class="table-info">
+              <td colspan="5"><b>🧠 Phase 2: JavaScript (Days 11–20)</b></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>11</td>
+              <td class="pointer" onclick="showDayModal(11)">
+                JS Basics – Variables, Data Types
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(11);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>12</td>
+              <td class="pointer" onclick="showDayModal(12)">
+                Operators, Conditionals, Loops
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(12);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>13</td>
+              <td class="pointer" onclick="showDayModal(13)">
+                Functions, Scope, Hoisting
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(13);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>14</td>
+              <td class="pointer" onclick="showDayModal(14)">
+                Arrays & Array Methods
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(14);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>15</td>
+              <td class="pointer" onclick="showDayModal(15)">
+                Objects & Object Methods
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(15);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>16</td>
+              <td class="pointer" onclick="showDayModal(16)">
+                DOM Manipulation – Selectors, Events
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(16);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>17</td>
+              <td class="pointer" onclick="showDayModal(17)">
+                Forms, Validations, Event Handling
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(17);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>18</td>
+              <td class="pointer" onclick="showDayModal(18)">
+                LocalStorage & SessionStorage
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(18);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>19</td>
+              <td class="pointer" onclick="showDayModal(19)">
+                ES6 Features – let/const, Arrow Functions, Destructuring
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(19);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>20</td>
+              <td class="pointer" onclick="showDayModal(20)">
+                Project: To-Do App with JS DOM & Storage
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(20);return false;">Watch</a>
+              </td>
+            </tr>
+            <!-- Phase 3 -->
+            <tr class="table-light">
+              <td colspan="5"><b>⚛️ Phase 3: React (Days 21–30)</b></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>21</td>
+              <td class="pointer" onclick="showDayModal(21)">
+                React Intro + Setup, JSX Basics
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(21);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>22</td>
+              <td class="pointer" onclick="showDayModal(22)">
+                Components, Props
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(22);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>23</td>
+              <td class="pointer" onclick="showDayModal(23)">useState Hook</td>
+              <td>
+                <a href="#" onclick="showDayModal(23);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>24</td>
+              <td class="pointer" onclick="showDayModal(24)">
+                Forms Handling in React
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(24);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>25</td>
+              <td class="pointer" onclick="showDayModal(25)">
+                useEffect & Lifecycle
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(25);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>26</td>
+              <td class="pointer" onclick="showDayModal(26)">
+                Lists, Keys, Conditional Rendering
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(26);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>27</td>
+              <td class="pointer" onclick="showDayModal(27)">
+                React Router Basics
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(27);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>28</td>
+              <td class="pointer" onclick="showDayModal(28)">
+                Lifting State Up, Context API
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(28);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>29</td>
+              <td class="pointer" onclick="showDayModal(29)">
+                Custom Hooks & Code Reusability
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(29);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>30</td>
+              <td class="pointer" onclick="showDayModal(30)">
+                Mini Project: Blog UI or Weather App
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(30);return false;">Watch</a>
+              </td>
+            </tr>
+            <!-- Phase 4 -->
+            <tr class="table-warning">
+              <td colspan="5">
+                <b>🛠️ Phase 4: Node.js & Express (Days 31–40)</b>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>31</td>
+              <td class="pointer" onclick="showDayModal(31)">
+                Node.js Intro – Modules, fs, path
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(31);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>32</td>
+              <td class="pointer" onclick="showDayModal(32)">
+                NPM, Scripts, Nodemon
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(32);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>33</td>
+              <td class="pointer" onclick="showDayModal(33)">
+                Express.js Intro – Routing, Middleware
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(33);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>34</td>
+              <td class="pointer" onclick="showDayModal(34)">
+                REST API Basics (GET, POST, PUT, DELETE)
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(34);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>35</td>
+              <td class="pointer" onclick="showDayModal(35)">
+                JSON Handling & Postman Testing
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(35);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>36</td>
+              <td class="pointer" onclick="showDayModal(36)">
+                Express Router & API Structuring
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(36);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>37</td>
+              <td class="pointer" onclick="showDayModal(37)">
+                Middleware Deep Dive (error, logger)
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(37);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>38</td>
+              <td class="pointer" onclick="showDayModal(38)">
+                Async/Await & Error Handling
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(38);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>39</td>
+              <td class="pointer" onclick="showDayModal(39)">
+                JWT Auth Basics – Sign, Verify Tokens
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(39);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>40</td>
+              <td class="pointer" onclick="showDayModal(40)">
+                Project: CRUD API with Express
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(40);return false;">Watch</a>
+              </td>
+            </tr>
+            <!-- Phase 5 -->
+            <tr class="table-secondary">
+              <td colspan="5"><b>🧠 Phase 5: MongoDB (Days 41–50)</b></td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>41</td>
+              <td class="pointer" onclick="showDayModal(41)">
+                What is NoSQL & MongoDB Intro
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(41);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>42</td>
+              <td class="pointer" onclick="showDayModal(42)">
+                CRUD with MongoDB Shell
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(42);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>43</td>
+              <td class="pointer" onclick="showDayModal(43)">
+                MongoDB Atlas Setup & Node Connection
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(43);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>44</td>
+              <td class="pointer" onclick="showDayModal(44)">
+                Mongoose – Models & Schemas
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(44);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>45</td>
+              <td class="pointer" onclick="showDayModal(45)">
+                Validation & Relationships
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(45);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>46</td>
+              <td class="pointer" onclick="showDayModal(46)">
+                Population, Aggregation
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(46);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>47</td>
+              <td class="pointer" onclick="showDayModal(47)">
+                CRUD with Mongoose
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(47);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>48</td>
+              <td class="pointer" onclick="showDayModal(48)">
+                JWT + MongoDB Authentication
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(48);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>49</td>
+              <td class="pointer" onclick="showDayModal(49)">
+                Protecting Routes with Middleware
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(49);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>50</td>
+              <td class="pointer" onclick="showDayModal(50)">
+                Project: Task Manager API (Mongo + Express)
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(50);return false;">Watch</a>
+              </td>
+            </tr>
+            <!-- Phase 6 -->
+            <tr class="table-dark text-white">
+              <td colspan="5">
+                <b>🌐 Phase 6: Full Stack Integration (Days 51–55)</b>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>51</td>
+              <td class="pointer" onclick="showDayModal(51)">
+                React + Node Connection
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(51);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>52</td>
+              <td class="pointer" onclick="showDayModal(52)">
+                Axios – API Calls from React
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(52);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>53</td>
+              <td class="pointer" onclick="showDayModal(53)">
+                User Auth Full Stack (Login/Signup UI + JWT)
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(53);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>54</td>
+              <td class="pointer" onclick="showDayModal(54)">
+                Global State with Context API for Auth
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(54);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>55</td>
+              <td class="pointer" onclick="showDayModal(55)">
+                Full Stack Setup: MERN Boilerplate Project
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(55);return false;">Watch</a>
+              </td>
+            </tr>
+            <!-- Phase 7 -->
+            <tr class="table-success">
+              <td colspan="5">
+                <b>🚀 Phase 7: Deployment & Career Prep (Days 56–60)</b>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>56</td>
+              <td class="pointer" onclick="showDayModal(56)">
+                Hosting React on Netlify/Vercel
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(56);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>57</td>
+              <td class="pointer" onclick="showDayModal(57)">
+                Hosting Express on Render
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(57);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>58</td>
+              <td class="pointer" onclick="showDayModal(58)">
+                Environment Variables, Secrets & Security
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(58);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>59</td>
+              <td class="pointer" onclick="showDayModal(59)">
+                Portfolio Website + GitHub Projects Showcase
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(59);return false;">Watch</a>
+              </td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td><input type="checkbox" /></td>
+              <td>60</td>
+              <td class="pointer" onclick="showDayModal(60)">
+                Resume, LinkedIn Profile & Interview Tips
+              </td>
+              <td>
+                <a href="#" onclick="showDayModal(60);return false;">Watch</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alert alert-info mt-3">
+        <strong>Tip:</strong> Use the checkboxes to track your daily progress
+        and revision!
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-light py-5">
+      <div class="container">
+        <h2 class="mb-4 text-primary">🧩 Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm pointer"
+              onclick="showProjectModal(1)"
+            >
+              <div class="card-body">
+                <h5 class="card-title">Personal Portfolio (HTML/CSS)</h5>
+                <p class="card-text">
+                  Build your own portfolio website to showcase your skills and
+                  projects.
+                </p>
+                <span class="badge bg-success">Phase 1</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm pointer"
+              onclick="showProjectModal(2)"
+            >
+              <div class="card-body">
+                <h5 class="card-title">To-Do List (JS + Storage)</h5>
+                <p class="card-text">
+                  Create a dynamic to-do app using JavaScript and browser
+                  storage.
+                </p>
+                <span class="badge bg-info">Phase 2</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm pointer"
+              onclick="showProjectModal(3)"
+            >
+              <div class="card-body">
+                <h5 class="card-title">Blog UI or Weather App (React)</h5>
+                <p class="card-text">
+                  Build a modern UI with React, using state and props.
+                </p>
+                <span class="badge bg-primary">Phase 3</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm pointer"
+              onclick="showProjectModal(4)"
+            >
+              <div class="card-body">
+                <h5 class="card-title">CRUD API (Node + Express)</h5>
+                <p class="card-text">
+                  Develop a RESTful API with Node.js and Express.
+                </p>
+                <span class="badge bg-warning text-dark">Phase 4</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm pointer"
+              onclick="showProjectModal(5)"
+            >
+              <div class="card-body">
+                <h5 class="card-title">Task Manager API (Mongo + Auth)</h5>
+                <p class="card-text">
+                  Implement authentication and data storage with MongoDB.
+                </p>
+                <span class="badge bg-secondary">Phase 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div
+              class="card h-100 shadow-sm pointer"
+              onclick="showProjectModal(6)"
+            >
+              <div class="card-body">
+                <h5 class="card-title">MERN Stack App (Full Integration)</h5>
+                <p class="card-text">
+                  Combine React, Node, Express, and MongoDB for a full stack
+                  project.
+                </p>
+                <span class="badge bg-dark">Phase 6</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section id="addons" class="container py-5">
+      <h2 class="mb-4 text-primary">✅ Course Add-ons</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-primary pointer"
+            onclick="showAddonModal(1)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">📘 Notes & Cheatsheets</h5>
+              <ul>
+                <li>Downloadable PDF notes</li>
+                <li>Code snippets & diagrams</li>
+                <li>Cheatsheets for HTML, CSS, Git, JS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-success pointer"
+            onclick="showAddonModal(2)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">🧪 Quizzes</h5>
+              <ul>
+                <li>HTML/CSS, Git, JS, React, Node, MongoDB</li>
+                <li>Test your knowledge after each phase</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-warning pointer"
+            onclick="showAddonModal(3)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">🎥 Live Sessions</h5>
+              <ul>
+                <li>Live Q&A after major milestones</li>
+                <li>Debugging and feedback sessions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-info pointer"
+            onclick="showAddonModal(4)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">🔐 Real-World Challenges</h5>
+              <ul>
+                <li>Weekly assignments</li>
+                <li>Freelance-like tasks</li>
+                <li>Mock client briefs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div
+            class="card h-100 border-secondary pointer"
+            onclick="showAddonModal(5)"
+          >
+            <div class="card-body">
+              <h5 class="card-title">🧠 Additional Perks</h5>
+              <ul>
+                <li>GitHub Repo Templates</li>
+                <li>Resume & LinkedIn Guide</li>
+                <li>Interview Questions Bank</li>
+                <li>Internship/Certification</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profile Modal (no image) -->
+    <div
+      class="modal fade"
+      id="profileModal"
+      tabindex="-1"
+      aria-labelledby="profileModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="profileModalLabel">
+              Meet Shivansh Vasu
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <h4>Shivansh Vasu</h4>
+            <p>
+              Educator | Mentor | Full Stack Developer<br />
+              <a
+                href="https://youtube.com/@shivanshvasu?sub_confirmation=1"
+                target="_blank"
+                class="btn btn-danger btn-sm mb-2"
+                >Subscribe on YouTube</a
+              >
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-3">
+              <a
+                href="https://linktr.ee/shivanshvasu"
+                target="_blank"
+                class="btn btn-outline-dark btn-sm"
+                >Linktree</a
+              >
+              <a
+                href="https://instagram.com/theshivanshvasuofficial"
+                target="_blank"
+                class="btn btn-outline-danger btn-sm"
+                >Instagram</a
+              >
+              <a
+                href="https://youtube.com/@shivanshvasu"
+                target="_blank"
+                class="btn btn-outline-danger btn-sm"
+                >YouTube</a
+              >
+              <a
+                href="https://www.linkedin.com/theshivanshvasu"
+                target="_blank"
+                class="btn btn-outline-primary btn-sm"
+                >LinkedIn</a
+              >
+              <a
+                href="https://x.com/theshivanshvasu"
+                target="_blank"
+                class="btn btn-outline-secondary btn-sm"
+                >X (Twitter)</a
+              >
+              <a
+                href="https://www.whatsapp.com/channel/0029VbAWGE5ICVfcjjKTAS0B"
+                target="_blank"
+                class="btn btn-outline-success btn-sm"
+                >WhatsApp Channel</a
+              >
+            </div>
+            <p class="mb-0">
+              "Join the Elevate community and unlock your potential as a modern
+              web developer. Learn, build, revise, and grow with real-world
+              projects, live sessions, and career support. Your journey to tech
+              excellence starts here!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day Modal -->
+    <div
+      class="modal fade"
+      id="dayModal"
+      tabindex="-1"
+      aria-labelledby="dayModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="dayModalLabel">Day Details</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="dayModalBody">
+            <!-- Content injected by JS -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a
+              id="dayModalVideo"
+              href="#"
+              target="_blank"
+              class="btn btn-primary"
+              >Watch Video</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div
+      class="modal fade"
+      id="projectModal"
+      tabindex="-1"
+      aria-labelledby="projectModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="projectModalBody">
+            <!-- Content injected by JS -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a
+              id="projectModalVideo"
+              href="#"
+              target="_blank"
+              class="btn btn-primary"
+              >Project Video</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Addon Modal -->
+    <div
+      class="modal fade"
+      id="addonModal"
+      tabindex="-1"
+      aria-labelledby="addonModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addonModalLabel">Add-on Details</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="addonModalBody">
+            <!-- Content injected by JS -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <a
+              id="addonModalLink"
+              href="#"
+              target="_blank"
+              class="btn btn-primary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- Bootstrap CDN (optional if already included in your site) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <div class="container mt-5 mb-5">
+      <h2 class="text-center mb-4">📤 Submit Your Project</h2>
+
+      <form action="https://formspree.io/f/xldndzob" method="POST" class="border p-4 rounded shadow">
+        
+        <div class="mb-3">
+          <label for="name" class="form-label">👤 Full Name</label>
+          <input type="text" name="name" class="form-control" id="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">📧 Email Address</label>
+          <input type="email" name="email" class="form-control" id="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="projectTitle" class="form-label">📌 Project Title</label>
+          <input type="text" name="project_title" class="form-control" id="projectTitle" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="phase" class="form-label">🗂️ Course Phase</label>
+          <select name="phase" id="phase" class="form-select" required>
+            <option value="">Select Phase</option>
+            <option value="Phase 1">Phase 1</option>
+            <option value="Phase 2">Phase 2</option>
+            <option value="Phase 3">Phase 3</option>
+            <option value="Phase 4">Phase 4</option>
+            <option value="Phase 5">Phase 5</option>
+            <option value="Phase NA">N.A</option>
+            <option value="Final Project">Final Project</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">📝 Project Description</label>
+          <textarea name="description" class="form-control" id="description" rows="3" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="link" class="form-label">🔗 GitHub or Google Drive Link</label>
+          <input type="url" name="project_link" class="form-control" id="link" placeholder="https://github.com/..." required>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">🚀 Submit Project</button>
+      </form>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h5 class="mb-3">Elevate Course - A Full Stack Web Dev Course</h5>
+            <p>
+              Empowering you to become a modern web developer with hands-on
+              projects, revision tools, and a supportive community. <br />
+              <span class="fw-bold">Learn. Build. Revise. Succeed.</span>
+            </p>
+            <div class="mb-2">
+              <a
+                href="https://www.youtube.com/@shivanshvasu"
+                class="footer-link"
+                target="_blank"
+                >YouTube</a
+              >
+              &nbsp;|&nbsp;
+              <a
+                href="https://linktr.ee/shivanshvasu"
+                class="footer-link"
+                target="_blank"
+                >Linktree</a
+              >
+              &nbsp;|&nbsp;
+              <a
+                href="https://instagram.com/theshivanshvasuofficial"
+                class="footer-link"
+                target="_blank"
+                >Instagram</a
+              >
+              &nbsp;|&nbsp;
+              <a
+                href="https://www.linkedin.com/theshivanshvasu"
+                class="footer-link"
+                target="_blank"
+                >LinkedIn</a
+              >
+              &nbsp;|&nbsp;
+              <a
+                href="https://x.com/theshivanshvasu"
+                class="footer-link"
+                target="_blank"
+                >X (Twitter)</a
+              >
+              &nbsp;|&nbsp;
+              <a
+                href="https://www.whatsapp.com/channel/0029VbAWGE5ICVfcjjKTAS0B"
+                class="footer-link"
+                target="_blank"
+                >WhatsApp</a
+              >
+            </div>
+            <div class="small text-white-50">
+              &copy; 2025 Elevate by Shivansh Vasu. Crafted with 🤍 for learners
+              everywhere.
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Profile Modal
+      function showProfileModal() {
+        var modal = new bootstrap.Modal(
+          document.getElementById("profileModal")
+        );
+        modal.show();
+      }
+
+      // Day Modal Data
+      const dayDetails = {
+        1: {
+          title: "Day 1: Intro to Full Stack Web Dev + Tools Setup",
+          desc:
+            "Kickstart your journey! Learn about the full stack roadmap, tools, and environment setup.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        2: {
+          title: "Day 2: HTML Basics – Tags, Structure, Boilerplate",
+          desc:
+            "Understand HTML tags, document structure, and create your first web page.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        3: {
+          title: "Day 3: Forms, Inputs, Semantic HTML, Embedding Media",
+          desc: "Work with forms, semantic tags, and embed images/videos.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        4: {
+          title:
+            "Day 4: CSS Basics – Selectors, Colors, Inline/External Styles",
+          desc:
+            "Learn CSS selectors, color systems, and how to style with CSS.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        5: {
+          title: "Day 5: Box Model – Margin, Padding, Border",
+          desc: "Master the CSS box model for layout and spacing.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        6: {
+          title: "Day 6: Flexbox - Deep Dive",
+          desc: "Responsive layouts with Flexbox.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        7: {
+          title: "Day 7: CSS Grid & Layout Tricks",
+          desc: "Advanced layouts using CSS Grid.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        8: {
+          title: "Day 8: Responsive Design + Media Queries",
+          desc: "Make your sites mobile-friendly.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        9: {
+          title: "Day 9: Git & GitHub Basics – Repos, Commits, Push",
+          desc: "Version control with Git and GitHub.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        10: {
+          title: "Day 10: Branching, Merge, Pull Requests (PRs)",
+          desc: "Collaborate with branching and PRs.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        11: {
+          title: "Day 11: JS Basics – Variables, Data Types",
+          desc: "Introduction to JavaScript variables and data types.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        12: {
+          title: "Day 12: Operators, Conditionals, Loops",
+          desc:
+            "Learn about operators, conditional statements, and loops in JavaScript.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        13: {
+          title: "Day 13: Functions, Scope, Hoisting",
+          desc: "Understand functions, scope, and hoisting in JS.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        14: {
+          title: "Day 14: Arrays & Array Methods",
+          desc: "Work with arrays and their powerful methods.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        15: {
+          title: "Day 15: Objects & Object Methods",
+          desc: "Master objects and their methods in JS.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        16: {
+          title: "Day 16: DOM Manipulation – Selectors, Events",
+          desc: "Manipulate the DOM and handle events.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        17: {
+          title: "Day 17: Forms, Validations, Event Handling",
+          desc: "Handle forms and validations in JS.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        18: {
+          title: "Day 18: LocalStorage & SessionStorage",
+          desc: "Persist data in the browser.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        19: {
+          title:
+            "Day 19: ES6 Features – let/const, Arrow Functions, Destructuring",
+          desc: "Modern JS features for cleaner code.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        20: {
+          title: "Day 20: Project: To-Do App with JS DOM & Storage",
+          desc: "Build a to-do app using JS and browser storage.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        21: {
+          title: "Day 21: React Intro + Setup, JSX Basics",
+          desc: "Get started with React and JSX.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        22: {
+          title: "Day 22: Components, Props",
+          desc: "Understand React components and props.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        23: {
+          title: "Day 23: useState Hook",
+          desc: "Manage state in React with useState.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        24: {
+          title: "Day 24: Forms Handling in React",
+          desc: "Handle forms in React apps.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        25: {
+          title: "Day 25: useEffect & Lifecycle",
+          desc: "Side effects and lifecycle in React.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        26: {
+          title: "Day 26: Lists, Keys, Conditional Rendering",
+          desc: "Render lists and conditionals in React.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        27: {
+          title: "Day 27: React Router Basics",
+          desc: "Add routing to your React apps.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        28: {
+          title: "Day 28: Lifting State Up, Context API",
+          desc: "Share state and use Context API.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        29: {
+          title: "Day 29: Custom Hooks & Code Reusability",
+          desc: "Create custom hooks for reusable logic.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        30: {
+          title: "Day 30: Mini Project: Blog UI or Weather App",
+          desc: "Build a React project.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        31: {
+          title: "Day 31: Node.js Intro – Modules, fs, path",
+          desc: "Introduction to Node.js and core modules.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        32: {
+          title: "Day 32: NPM, Scripts, Nodemon",
+          desc: "Work with npm, scripts, and nodemon.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        33: {
+          title: "Day 33: Express.js Intro – Routing, Middleware",
+          desc: "Start with Express.js and routing.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        34: {
+          title: "Day 34: REST API Basics (GET, POST, PUT, DELETE)",
+          desc: "Build REST APIs with Express.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        35: {
+          title: "Day 35: JSON Handling & Postman Testing",
+          desc: "Test APIs with Postman.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        36: {
+          title: "Day 36: Express Router & API Structuring",
+          desc: "Organize your Express APIs.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        37: {
+          title: "Day 37: Middleware Deep Dive (error, logger)",
+          desc: "Advanced middleware in Express.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        38: {
+          title: "Day 38: Async/Await & Error Handling",
+          desc: "Handle async code and errors.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        39: {
+          title: "Day 39: JWT Auth Basics – Sign, Verify Tokens",
+          desc: "Add authentication with JWT.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        40: {
+          title: "Day 40: Project: CRUD API with Express",
+          desc: "Build a CRUD API.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        41: {
+          title: "Day 41: What is NoSQL & MongoDB Intro",
+          desc: "Learn about NoSQL and MongoDB.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        42: {
+          title: "Day 42: CRUD with MongoDB Shell",
+          desc: "Perform CRUD in MongoDB shell.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        43: {
+          title: "Day 43: MongoDB Atlas Setup & Node Connection",
+          desc: "Connect Node.js to MongoDB Atlas.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        44: {
+          title: "Day 44: Mongoose – Models & Schemas",
+          desc: "Use Mongoose for MongoDB.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        45: {
+          title: "Day 45: Validation & Relationships",
+          desc: "Add validation and relationships.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        46: {
+          title: "Day 46: Population, Aggregation",
+          desc: "Advanced MongoDB queries.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        47: {
+          title: "Day 47: CRUD with Mongoose",
+          desc: "CRUD operations with Mongoose.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        48: {
+          title: "Day 48: JWT + MongoDB Authentication",
+          desc: "Authentication with JWT and MongoDB.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        49: {
+          title: "Day 49: Protecting Routes with Middleware",
+          desc: "Secure your APIs.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        50: {
+          title: "Day 50: Project: Task Manager API (Mongo + Express)",
+          desc: "Build a task manager API.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        51: {
+          title: "Day 51: React + Node Connection",
+          desc: "Connect React frontend to Node backend.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        52: {
+          title: "Day 52: Axios – API Calls from React",
+          desc: "Make API calls from React using Axios.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        53: {
+          title: "Day 53: User Auth Full Stack (Login/Signup UI + JWT)",
+          desc: "Implement full stack authentication.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        54: {
+          title: "Day 54: Global State with Context API for Auth",
+          desc: "Manage global auth state.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        55: {
+          title: "Day 55: Full Stack Setup: MERN Boilerplate Project",
+          desc: "Set up a MERN boilerplate.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        56: {
+          title: "Day 56: Hosting React on Netlify/Vercel",
+          desc: "Deploy React apps.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        57: {
+          title: "Day 57: Hosting Express on Render",
+          desc: "Deploy Express backend.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        58: {
+          title: "Day 58: Environment Variables, Secrets & Security",
+          desc: "Secure your apps.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        59: {
+          title: "Day 59: Portfolio Website + GitHub Projects Showcase",
+          desc: "Showcase your work.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        60: {
+          title: "Day 60: Resume, LinkedIn Profile & Interview Tips",
+          desc: "Career prep and interview tips.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+      };
+
+      function showDayModal(day) {
+        const data = dayDetails[day] || {
+          title: "Coming Soon",
+          desc: "Details will be updated soon.",
+          video: "#",
+        };
+        document.getElementById("dayModalLabel").innerText = data.title;
+        document.getElementById(
+          "dayModalBody"
+        ).innerHTML = `<p>${data.desc}</p>`;
+        document.getElementById("dayModalVideo").href = data.video;
+        var modal = new bootstrap.Modal(document.getElementById("dayModal"));
+        modal.show();
+      }
+
+      // Project Modal Data
+      const projectDetails = {
+        1: {
+          title: "Personal Portfolio (HTML/CSS)",
+          desc:
+            "Build your own portfolio website to showcase your skills and projects.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        2: {
+          title: "To-Do List (JS + Storage)",
+          desc:
+            "Create a dynamic to-do app using JavaScript and browser storage.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        3: {
+          title: "Blog UI or Weather App (React)",
+          desc: "Build a modern UI with React, using state and props.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        4: {
+          title: "CRUD API (Node + Express)",
+          desc: "Develop a RESTful API with Node.js and Express.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        5: {
+          title: "Task Manager API (Mongo + Auth)",
+          desc: "Implement authentication and data storage with MongoDB.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+        6: {
+          title: "MERN Stack App (Full Integration)",
+          desc:
+            "Combine React, Node, Express, and MongoDB for a full stack project.",
+          video:
+            "https://www.youtube.com/playlist?list=PLFu6kWRx3ksMIQMrYq8naQMBc2TNuE9lc",
+        },
+      };
+      function showProjectModal(num) {
+        const data = projectDetails[num] || {
+          title: "Coming Soon",
+          desc: "Details will be updated soon.",
+          video: "#",
+        };
+        document.getElementById("projectModalLabel").innerText = data.title;
+        document.getElementById(
+          "projectModalBody"
+        ).innerHTML = `<p>${data.desc}</p>`;
+        document.getElementById("projectModalVideo").href = data.video;
+        var modal = new bootstrap.Modal(
+          document.getElementById("projectModal")
+        );
+        modal.show();
+      }
+
+      // Addon Modal Data
+      const addonDetails = {
+        1: {
+          title: "Notes & Cheatsheets",
+          desc:
+            "Downloadable PDF notes, code snippets, and cheatsheets for quick revision.",
+          link: "https://linktr.ee/shivanshvasu",
+        },
+        2: {
+          title: "Quizzes",
+          desc:
+            "Test your knowledge after each phase with interactive quizzes.",
+          link: "https://youtube.com/@shivanshvasu",
+        },
+        3: {
+          title: "Live Sessions",
+          desc: "Join live Q&A and debugging sessions after major milestones.",
+          link: "https://youtube.com/@shivanshvasu",
+        },
+        4: {
+          title: "Real-World Challenges",
+          desc:
+            "Weekly assignments and freelance-like tasks for hands-on experience.",
+          link: "https://linktr.ee/shivanshvasu",
+        },
+        5: {
+          title: "Additional Perks",
+          desc:
+            "GitHub repo templates, resume/LinkedIn guide, interview questions, and more.",
+          link: "https://linktr.ee/shivanshvasu",
+        },
+      };
+      function showAddonModal(num) {
+        const data = addonDetails[num] || {
+          title: "Coming Soon",
+          desc: "Details will be updated soon.",
+          link: "#",
+        };
+        document.getElementById("addonModalLabel").innerText = data.title;
+        document.getElementById(
+          "addonModalBody"
+        ).innerHTML = `<p>${data.desc}</p>`;
+        document.getElementById("addonModalLink").href = data.link;
+        var modal = new bootstrap.Modal(document.getElementById("addonModal"));
+        modal.show();
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+      // Assign unique IDs to all checkboxes and restore their state
+      const table = document.querySelector("#phases table");
+      if (!table) return;
+      let checkboxIndex = 0;
+      table.querySelectorAll('input[type="checkbox"]').forEach((cb) => {
+        const cbId = "cb-" + checkboxIndex;
+        cb.setAttribute("data-cb-id", cbId);
+        // Restore state
+        const saved = localStorage.getItem(cbId);
+        if (saved === "1") cb.checked = true;
+        else cb.checked = false;
+        // Save on change
+        cb.addEventListener("change", function () {
+          localStorage.setItem(cbId, cb.checked ? "1" : "0");
+        });
+        checkboxIndex++;
+      });
+    });
+        // Progress Tracker Logic
+    function updateProgressBar() {
+      const checkboxes = document.querySelectorAll('#phases table input[type="checkbox"]');
+      if (!checkboxes.length) return;
+      let checked = 0;
+      checkboxes.forEach(cb => { if (cb.checked) checked++; });
+      const percent = Math.round((checked / checkboxes.length) * 100);
+      const bar = document.getElementById('progressBar');
+      const text = document.getElementById('progressText');
+      if (bar) {
+        bar.style.width = percent + '%';
+        bar.setAttribute('aria-valuenow', percent);
+        bar.textContent = percent + '%';
+      }
+      if (text) {
+        text.textContent = `${checked} of ${checkboxes.length} tasks completed (including revision)`;
+      }
+    }
+    // Update on load and on checkbox change
+    document.addEventListener("DOMContentLoaded", updateProgressBar);
+    document.addEventListener("change", function (e) {
+      if (e.target.matches('#phases table input[type="checkbox"]')) {
+        updateProgressBar();
+      }
+    });
+    </script>
+  </body>
+</html>

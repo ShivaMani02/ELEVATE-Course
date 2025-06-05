@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      padding: 20px;        /* space inside border */
+      border: 15px solid black; /* border around the content + padding */
+      margin: 30px;          /* space outside the border */
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Box Model</h1>
+
+  <div class="box">
+    This is a box demonstrating the CSS Box Model.
+  </div>
+
+  <!-- Explanation:
+    Total Width = content width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+                = 200px + 20px + 20px + 5px + 5px + 30px + 30px = 310px total width
+
+    Total Height = content height + padding-top + padding-bottom + border-top + border-bottom + margin-top + margin-bottom
+                 = 100px + 20px + 20px + 5px + 5px + 30px + 30px = 210px total height
+
+  -->
+</body>
+</html>

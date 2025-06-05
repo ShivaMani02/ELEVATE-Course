@@ -1,0 +1,47 @@
+/* 
+===========================
+ EXTERNAL CSS FILE
+===========================
+*/
+
+/* Universal selector to reset margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* External styling example */
+.external-box {
+  background-color: lightblue;
+  padding: 15px;
+  margin-top: 20px;
+  border: 2px solid #007acc;
+  border-radius: 10px;
+}
+
+/* Common heading spacing */
+h1, h2, h3 {
+  margin-top: 20px;
+}
+ h2, h3 {
+      color: rgb(255, 0, 0);
+    }
+
+/* Button base style */
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  transition: all 0.3s ease;
+}

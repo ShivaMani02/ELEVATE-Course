@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Project : SHivansh Vasu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .container {
+            background-color: white;
+            padding: 15px;
+            border-radius: 5px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        code {
+            background: #eee;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+        .example {
+            background: #f9f9f9;
+            border-left: 4px solid #007acc;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-family: 'Consolas', monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>HTML Learning Resource - Dev. Shivansh Vasu</h1>
+        <p>
+            This page is a comprehensive guide to the most important HTML tags, their usage, and examples. 
+            HTML (HyperText Markup Language) is the standard language for creating web pages and web applications.
+        </p>
+
+        <h2>&lt;h1&gt; to &lt;h6&gt;: Heading Tags</h2>
+        <p>
+            Headings are used to define the structure of your content. <br>
+            <code>&lt;h1&gt;</code> is the most important (largest), and <code>&lt;h6&gt;</code> is the least important (smallest).
+        </p>
+        <div class="example">
+            &lt;h1&gt;Main Title&lt;/h1&gt;<br>
+            &lt;h2&gt;Section Title&lt;/h2&gt;<br>
+            &lt;h3&gt;Subsection&lt;/h3&gt;
+        </div>
+
+        <h2>&lt;p&gt;: Paragraph Tag</h2>
+        <p>
+            The <code>&lt;p&gt;</code> tag defines a paragraph of text. Browsers automatically add some space before and after each paragraph.
+        </p>
+        <div class="example">
+            &lt;p&gt;This is a paragraph of text.&lt;/p&gt;
+        </div>
+
+        <h2>&lt;a&gt;: Anchor Tag</h2>
+        <p>
+            The <code>&lt;a&gt;</code> tag creates hyperlinks, which allow users to click and navigate to another page or website.<br>
+            The <code>href</code> attribute specifies the destination URL.
+        </p>
+        <div class="example">
+            &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+        </div>
+
+        <h2>&lt;img&gt;: Image Tag</h2>
+        <p>
+            The <code>&lt;img&gt;</code> tag is used to display images. <br>
+            <code>src</code> specifies the image URL, and <code>alt</code> provides alternative text for accessibility.
+        </p>
+        <div class="example">
+            &lt;img src="https://via.placeholder.com/150" alt="Sample Image"&gt;
+        </div>
+
+        <h2>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;: Lists</h2>
+        <p>
+            Lists are used to group related items:
+            <ul>
+                <li><code>&lt;ul&gt;</code>: Unordered (bulleted) list</li>
+                <li><code>&lt;ol&gt;</code>: Ordered (numbered) list</li>
+                <li><code>&lt;li&gt;</code>: List item</li>
+            </ul>
+        </p>
+        <div class="example">
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 1&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Item 2&lt;/li&gt;<br>
+            &lt;/ul&gt;<br>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;First&lt;/li&gt;<br>
+            &nbsp;&nbsp;&lt;li&gt;Second&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </div>
+
+        <h2>&lt;table&gt;: Table Tag</h2>
+        <p>
+            Tables organize data into rows and columns. Use <code>&lt;tr&gt;</code> for rows, <code>&lt;th&gt;</code> for headers, and <code>&lt;td&gt;</code> for data cells.
+        </p>
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+        <table>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+            </tr>
+        </table>
+
+        <h2>&lt;form&gt;: Form Tag</h2>
+        <p>
+            Forms collect user input. Common elements include <code>&lt;input&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;button&gt;</code>.
+        </p>
+        <div class="example">
+            &lt;form&gt;<br>
+            &nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+            &nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+            &nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+            &lt;/form&gt;
+        </div>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="3"></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>&lt;div&gt; and &lt;span&gt;: Structural Tags</h2>
+        <p>
+            <code>&lt;div&gt;</code> is a block-level container for grouping elements, useful for layout.<br>
+            <code>&lt;span&gt;</code> is an inline container for styling or marking up a part of text.
+        </p>
+        <div class="example">
+            &lt;div style="background: #eee;"&gt;Block content&lt;/div&gt;<br>
+            &lt;p&gt;This is &lt;span style="color: red;"&gt;important&lt;/span&gt; text.&lt;/p&gt;
+        </div>
+
+        <h2>&lt;input&gt;: Input Tag</h2>
+        <p>
+            The <code>&lt;input&gt;</code> tag is used for various types of user input, such as text, password, checkbox, radio, etc.
+        </p>
+        <div class="example">
+            &lt;input type="text" placeholder="Text"&gt;<br>
+            &lt;input type="checkbox"&gt; Checkbox<br>
+            &lt;input type="radio" name="choice"&gt; Radio
+        </div>
+
+        <h2>&lt;footer&gt;: Footer Tag</h2>
+        <p>
+            The <code>&lt;footer&gt;</code> tag defines a footer for a document or section, often containing copyright or contact info.
+        </p>
+        <footer>
+            <p>© 2025 HTML Learning Project | Created for educational purposes.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
