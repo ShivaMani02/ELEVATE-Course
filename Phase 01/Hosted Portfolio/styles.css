@@ -1,12 +1,12 @@
-:root {
-    --primary: #2d3748;
-    --secondary: #4fd1c5;
-    --bg: #f7fafc;
-    --white: #fff;
-    --card: #fff;
-    --shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
-    --radius: 12px;
-    --font-main: 'Segoe UI', Arial, sans-serif;
+:root{
+  --primary: #021730;
+  --secondary: #e38007;
+  --bg: #f5f7fa;
+  --white: #ffffff;
+  --card: #ffffff;
+  --shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  --radius: 12px;
+  --font-main: 'Segoe UI', Arial, sans-serif;
 }
 
 * {
@@ -86,7 +86,7 @@ nav ul {
     justify-content: center;
 }
 
-nav li {
+nav li{
     margin: 0 18px;
 }
 
