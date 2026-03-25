@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Forms · Validation · Events — Examples (Bootstrap)</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* small helper styles for demo clarity */
+    body { background:#f7f9fc; padding:28px; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto; }
+    .demo-card { max-width:720px; margin:0 auto; }
+    .strength-badge { font-weight:600; }
+    .log { height:120px; overflow:auto; background:#fff; border:1px solid #e9ecef; padding:8px; font-size:.9rem; }
+    .small-muted { font-size:.85rem; color:#6c757d; }
+  </style>
+</head>
+<body>
+
+  <div class="card demo-card shadow-sm">
+    <div class="card-body">
+      <h4 class="card-title mb-3">Signup Form — (HTML5 + JS Validation + Events)</h4>
+
+      <!-- ----------------- SIGNUP FORM ----------------- -->
+      <form id="signupForm" novalidate>
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username <small class="text-muted">(min 3)</small></label>
+          <input type="text" id="username" class="form-control" name="username" required minlength="3" placeholder="Your username">
+          <div class="invalid-feedback">Username is required (min 3 characters).</div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" name="email" required placeholder="name@example.com">
+          <div class="invalid-feedback">Please provide a valid email address.</div>
+        </div>
+
+        <!-- Password & Confirm -->
+        <div class="mb-3">
+          <label class="form-label">Password <small class="text-muted">(min 6)</small></label>
+          <div class="input-group">
+            <input type="password" id="password" class="form-control" required minlength="6" placeholder="Password">
+            <button type="button" id="togglePwd" class="btn btn-outline-secondary">Show</button>
+          </div>
+          <div class="form-text">Strength: <span id="pwdStrength" class="strength-badge">—</span></div>
+          <div class="invalid-feedback">Password must be at least 6 characters.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="confirm" class="form-label">Confirm Password</label>
+          <input type="password" id="confirm" class="form-control" required placeholder="Repeat password">
+          <div class="invalid-feedback" id="confirmFeedback">Passwords must match.</div>
+        </div>
+
+        <!-- Bio (char counter) -->
+        <div class="mb-3">
+          <label for="bio" class="form-label">Short Bio (optional, max 120)</label>
+          <textarea id="bio" class="form-control" maxlength="120" rows="3" placeholder="I like building things..."></textarea>
+          <div class="form-text">Characters left: <span id="bioCount">120</span></div>
+        </div>
+
+        <!-- Role (change event) -->
+        <div class="mb-3">
+          <label for="role" class="form-label">Role</label>
+          <select id="role" class="form-select">
+            <option value="student">Student</option>
+            <option value="developer">Developer</option>
+            <option value="teacher">Teacher</option>
+            <option value="other">Other</option>
+          </select>
+          <div class="small-muted">Selecting role demonstrates the <code>change</code> event.</div>
+        </div>
+
+        <!-- Terms -->
+        <div class="mb-3 form-check">
+          <input type="checkbox" id="terms" class="form-check-input" required>
+          <label for="terms" class="form-check-label">I agree to the terms</label>
+          <div class="invalid-feedback">You must agree to the terms to continue.</div>
+        </div>
+
+        <!-- Alerts & Buttons -->
+        <div id="formAlert" class="mb-3"></div>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" id="resetBtn" class="btn btn-secondary ms-2">Reset</button>
+      </form>
+
+      <hr class="my-4">
+
+      <!-- ----------------- CONTACT EXAMPLE (char counter + input event) ----------------- -->
+      <h6>Contact Example — live validation (email) & character counter</h6>
+      <form id="contactForm" class="mt-2" novalidate>
+        <div class="mb-2">
+          <label for="c_email" class="form-label">Email</label>
+          <input type="email" id="c_email" class="form-control" required placeholder="contact@example.com">
+          <div class="invalid-feedback">Enter a valid email.</div>
+        </div>
+        <div class="mb-2">
+          <label for="message" class="form-label">Message (max 200)</label>
+          <textarea id="message" class="form-control" maxlength="200" rows="3" placeholder="Write your message..."></textarea>
+          <div class="form-text">Left: <span id="msgLeft">200</span></div>
+        </div>
+        <button class="btn btn-sm btn-success" type="submit">Send</button>
+      </form>
+
+      <hr class="my-4">
+
+      <!-- Event Log -->
+      <h6 class="mb-2">Event Log (shows events: input, focus, blur, change)</h6>
+      <div id="eventLog" class="log"></div>
+
+      <p class="small-muted mt-3">This file demonstrates: HTML5 attributes (<code>required</code>, <code>minlength</code>, <code>type</code>, <code>maxlength</code>), JavaScript validation with <code>preventDefault()</code>, real-time events (<code>input</code>, <code>change</code>), and UI feedback using Bootstrap's validation classes (<code>is-valid</code>/<code>is-invalid</code>).</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle (optional for components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // --- Helpers & element refs ---
+    const signupForm = document.getElementById('signupForm');
+    const username = document.getElementById('username');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const confirmPwd = document.getElementById('confirm');
+    const togglePwd = document.getElementById('togglePwd');
+    const pwdStrength = document.getElementById('pwdStrength');
+    const bio = document.getElementById('bio');
+    const bioCount = document.getElementById('bioCount');
+    const role = document.getElementById('role');
+    const terms = document.getElementById('terms');
+    const formAlert = document.getElementById('formAlert');
+    const eventLog = document.getElementById('eventLog');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const contactForm = document.getElementById('contactForm');
+    const c_email = document.getElementById('c_email');
+    const message = document.getElementById('message');
+    const msgLeft = document.getElementById('msgLeft');
+
+    // --- Utility: log events to the box ---
+    function logEvent(text) {
+      const time = new Date().toLocaleTimeString();
+      eventLog.innerHTML = `<div>[${time}] ${text}</div>` + eventLog.innerHTML;
+    }
+
+    // --- Password toggle ---
+    togglePwd.addEventListener('click', () => {
+      const type = password.type === 'password' ? 'text' : 'password';
+      password.type = type;
+      togglePwd.textContent = type === 'text' ? 'Hide' : 'Show';
+      const time = new Date().toLocaleTimeString();
+      eventLog.innerHTML = `<div>[${time}] ${text}</div>` + eventLog.innerHTML;
+    });
+
+    // --- Password strength (simple heuristic) ---
+    function evaluateStrength(pwd) {
+      if (!pwd) return '—';
+      let score = 0;
+      if (pwd.length >= 8) score++;
+      if (/[0-9]/.test(pwd)) score++;
+      if (/[A-Z]/.test(pwd)) score++;
+      if (/[^A-Za-z0-9]/.test(pwd)) score++;
+      if (score <= 1) return 'Weak';
+      if (score === 2) return 'Fair';
+      if (score === 3) return 'Good';
+      return 'Strong';
+    }
+
+    password.addEventListener('input', (e) => {
+      pwdStrength.textContent = evaluateStrength(e.target.value);
+      // visual border change (real-time validation)
+      if (e.target.value.length >= 6) {
+        password.classList.remove('is-invalid'); password.classList.add('is-valid');
+      } else {
+        password.classList.remove('is-valid'); password.classList.add('is-invalid');
+      }
+      logEvent('password input');
+    });
+
+    // --- Username real-time check (min length) ---
+    username.addEventListener('input', () => {
+      if (username.value.trim().length >= 3) {
+        username.classList.remove('is-invalid'); username.classList.add('is-valid');
+      } else {
+        username.classList.remove('is-valid'); username.classList.add('is-invalid');
+      }
+      logEvent('username typing');
+    });
+
+    // --- Confirm password check on blur & input ---
+    confirmPwd.addEventListener('input', () => {
+      const match = confirmPwd.value === password.value && confirmPwd.value.length > 0;
+      if (match) {
+        confirmPwd.classList.remove('is-invalid'); confirmPwd.classList.add('is-valid');
+        document.getElementById('confirmFeedback').textContent = 'Passwords match.';
+      } else {
+        confirmPwd.classList.remove('is-valid'); confirmPwd.classList.add('is-invalid');
+        document.getElementById('confirmFeedback').textContent = 'Passwords must match.';
+      }
+    });
+
+    // --- Bio character counter ---
+    bio.addEventListener('input', () => {
+      const left = 120 - bio.value.length;
+      bioCount.textContent = left;
+      logEvent('bio input');
+    });
+
+    // --- Role change event demo ---
+    role.addEventListener('change', () => {
+      logEvent(`role changed → ${role.value}`);
+    });
+
+    // --- Focus and blur logging (illustration of events) ---
+    [username, email, password, confirmPwd, bio].forEach(el => {
+      el.addEventListener('focus', () => logEvent(`${el.id} focused`));
+      el.addEventListener('blur', () => logEvent(`${el.id} blurred`));
+    });
+
+    // --- Reset button (clear validation states & form) ---
+    resetBtn.addEventListener('click', () => {
+      signupForm.reset();
+      [username, email, password, confirmPwd, bio].forEach(i => {
+        i.classList.remove('is-valid','is-invalid');
+      });
+      formAlert.innerHTML = '';
+      pwdStrength.textContent = '—';
+      bioCount.textContent = 120;
+      logEvent('Form reset');
+    });
+
+    // --- Signup form submit: JS validation + preventDefault ---
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault(); // stop real submission so we can validate & show results
+      formAlert.innerHTML = ''; // clear
+
+      // Use Constraint Validation API where possible
+      const formEl = signupForm;
+      if (!formEl.checkValidity()) {
+        // show browser validation feedback by adding Bootstrap 'was-validated' classes
+        formEl.classList.add('was-validated');
+        formAlert.innerHTML = `<div class="alert alert-danger py-2">Please fix highlighted fields.</div>`;
+        logEvent('submit blocked: HTML5 constraints failed');
+        return;
+      }
+
+      // Additional JS checks (confirm password)
+      if (password.value !== confirmPwd.value) {
+        confirmPwd.classList.add('is-invalid');
+        formAlert.innerHTML = `<div class="alert alert-danger py-2">Passwords do not match.</div>`;
+        logEvent('submit blocked: passwords mismatch');
+        return;
+      }
+
+      // All good — simulate success (in real apps, send to server)
+      formAlert.innerHTML = `<div class="alert alert-success py-2">Registration successful ✅ (demo)</div>`;
+      signupForm.reset();
+      [username, email, password, confirmPwd, bio].forEach(i => i.classList.remove('is-valid','is-invalid'));
+      pwdStrength.textContent = '—';
+      bioCount.textContent = 120;
+      logEvent('submit success');
+    });
+
+    // ---------------- Contact form: simple live feedback ----------------
+    message.addEventListener('input', () => {
+      const left = 200 - message.value.length;
+      msgLeft.textContent = left;
+      logEvent('contact message typing');
+    });
+
+    c_email.addEventListener('input', () => {
+      // simple live validation: show green if looks like email
+      const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c_email.value);
+      c_email.classList.toggle('is-valid', ok);
+      c_email.classList.toggle('is-invalid', c_email.value && !ok);
+      logEvent('contact email input');
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) {
+        contactForm.classList.add('was-validated');
+        logEvent('contact submit blocked: invalid');
+        return;
+      }
+      // simulate submission
+      logEvent('contact submitted (demo)');
+      c_email.classList.remove('is-valid','is-invalid');
+      contactForm.reset();
+      msgLeft.textContent = 200;
+      alert('Message sent (demo).');
+    });
+
+    // initialize counters
+    bioCount.textContent = 120;
+    msgLeft.textContent = 200;
+  </script>
+</body>
+</html>

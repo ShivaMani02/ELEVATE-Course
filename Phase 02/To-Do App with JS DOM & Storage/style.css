@@ -1,0 +1,348 @@
+:root {
+    --primary-color: #4F46E5;
+    --primary-hover: #4338CA;
+    --bg-gradient-1: #e0c3fc;
+    --bg-gradient-2: #8ec5fc;
+    --card-bg: rgba(255, 255, 255, 0.95);
+    --text-main: #1F2937;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+    --danger-color: #ef4444;
+    --success-color: #10B981;
+    --font-family: 'Outfit', sans-serif;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* Dark Theme Variables */
+body.dark-theme {
+    --bg-gradient-1: #111827;
+    --bg-gradient-2: #374151;
+    --card-bg: rgba(31, 41, 55, 0.95);
+    --text-main: #F9FAFB;
+    --text-muted: #9CA3AF;
+    --border-color: #374151;
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-main);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: color 0.3s ease;
+}
+
+.app-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+    transition: background 0.5s ease;
+}
+
+/* Typography */
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, var(--primary-color), #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+/* Main Card */
+.todo-card {
+    background: var(--card-bg);
+    border-radius: 2rem;
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Theme Toggle Button */
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+.theme-btn:hover {
+    color: var(--primary-color);
+    background: rgba(79, 70, 229, 0.1);
+    transform: rotate(15deg);
+}
+
+/* Input Group */
+.todo-input-group .input-group {
+    background: var(--card-bg);
+    box-shadow: var(--shadow-md) !important;
+}
+.todo-input-group input {
+    background: transparent !important;
+    color: var(--text-main) !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.todo-input-group input:focus {
+    box-shadow: none !important;
+}
+.todo-input-group input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+    font-weight: 400;
+}
+.date-input {
+    max-width: 150px;
+    border-left: 1px solid var(--border-color) !important;
+    color: var(--text-muted) !important;
+    font-size: 0.9rem !important;
+    cursor: pointer;
+}
+.date-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+body.dark-theme .date-input::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: all 0.2s;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+/* Filters */
+.custom-pills .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+.custom-pills .nav-link:hover {
+    background: rgba(79, 70, 229, 0.05);
+    color: var(--primary-color);
+}
+.custom-pills .nav-link.active {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: var(--primary-color);
+}
+
+/* Search */
+.search-box input {
+    padding-left: 2.5rem;
+    background-color: rgba(0,0,0,0.03) !important;
+    color: var(--text-main) !important;
+}
+body.dark-theme .search-box input {
+    background-color: rgba(255,255,255,0.05) !important;
+}
+.search-icon {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.search-box input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.1);
+}
+
+/* Task List Settings */
+.task-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent; 
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--border-color); 
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted); 
+}
+
+/* Task Items */
+.list-group-item {
+    background: transparent;
+    border-color: var(--border-color);
+    padding: 1.25rem 0.5rem;
+    transition: all 0.3s ease;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.list-group-item:last-child {
+    border-bottom: none;
+}
+.list-group-item:hover {
+    background-color: rgba(0,0,0,0.01);
+}
+body.dark-theme .list-group-item:hover {
+    background-color: rgba(255,255,255,0.02);
+}
+
+/* Checkbox (Custom) */
+.form-check-input.custom-checkbox {
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    transition: all 0.2s ease;
+    margin-top: 0;
+}
+.form-check-input.custom-checkbox:checked {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+.form-check-input.custom-checkbox:focus {
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}
+
+/* Task Content */
+.task-content {
+    flex-grow: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+.task-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    transition: color 0.3s, text-decoration-color 0.3s;
+    margin-bottom: 0.2rem;
+    display: block;
+    word-break: break-word;
+}
+.task-meta {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+.task-due {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: rgba(0,0,0,0.04);
+    padding: 0.1rem 0.5rem;
+    border-radius: 4px;
+}
+body.dark-theme .task-due {
+    background: rgba(255,255,255,0.05);
+}
+.task-due.overdue {
+    color: var(--danger-color);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Completed Task State */
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+.task-item.completed .task-meta {
+    opacity: 0.5;
+}
+
+/* Action Buttons */
+.task-actions {
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.list-group-item:hover .task-actions, 
+.task-actions:focus-within {
+    opacity: 1;
+}
+
+/* On mobile devices, always show actions so they don't have to hover */
+@media (hover: none) {
+    .task-actions {
+        opacity: 1;
+    }
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 0.4rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.action-btn:hover {
+    background: rgba(0,0,0,0.05);
+}
+body.dark-theme .action-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+.action-btn.edit-btn:hover {
+    color: var(--primary-color);
+}
+.action-btn.delete-btn:hover {
+    color: var(--danger-color);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Modals for Dark Theme */
+body.dark-theme .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+}
+body.dark-theme .modal-header .btn-close {
+    filter: invert(1);
+}
+body.dark-theme .modal-body input {
+    background-color: rgba(255,255,255,0.05) !important;
+    color: var(--text-main) !important;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.task-item {
+    animation: slideDown 0.3s ease forwards;
+}
+.task-item.falling {
+    animation: dropOut 0.3s ease forwards;
+}
+@keyframes dropOut {
+    to { opacity: 0; transform: translateY(20px) scale(0.95); }
+}
